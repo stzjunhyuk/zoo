@@ -34,6 +34,9 @@ jobs:
         working-directory: funny-spin
         run: npm run build
 
+      - name: Add .nojekyll
+        run: touch funny-spin/out/.nojekyll
+
       - uses: actions/upload-pages-artifact@v3
         with:
           path: funny-spin/out
